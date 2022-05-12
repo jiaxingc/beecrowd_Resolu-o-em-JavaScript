@@ -1,0 +1,26 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+// lines =>['12 1 15.30\r','16 2 5.10']
+var PROD1 = lines.shift().split(" ");
+// ['12', '1', '5.30']
+var PROD2 = lines.shift().split(" ");
+// ['16', '2', '5.10']
+
+var PROD_ID1 = PROD1.shift();
+//12
+var PROD_QTD1 = PROD1.shift();
+//  1
+var PROD_PRECO1 = PROD1.shift();
+//5.30
+
+var TOTAL1 = PROD_QTD1 * PROD_PRECO1;
+
+var PROD_ID2 = PROD2.shift();
+// 16
+var PROD_QTD2 = PROD2.shift();
+// 2 
+var PROD_PRECO2 = PROD2.shift();
+// 5.10
+var TOTAL2 = PROD_QTD2 * PROD_PRECO2;
+
+console.log("VALOR A PAGAR: R$ " + (TOTAL1 + TOTAL2).toFixed(2));
