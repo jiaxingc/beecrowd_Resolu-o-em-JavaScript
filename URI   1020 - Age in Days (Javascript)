@@ -1,0 +1,10 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+var age = parseInt(lines.shift());
+
+var ano = parseInt(age / 365);
+var mes = parseInt((age - ano * 365) / 30);
+var dia = parseInt( (age - (ano * 365)) - ( mes * 30));
+console.log(ano + " ano(s)");
+console.log(mes + " mes(es)");
+console.log(dia + " dia(s)");
