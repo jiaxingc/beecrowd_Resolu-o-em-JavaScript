@@ -1,0 +1,9 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var COD = parseInt(lines.shift());
+var HORA = parseInt(lines.shift());
+var PRECO = parseFloat(lines.shift());
+
+console.log("NUMBER = " + COD);
+console.log("SALARY = U$ " + (HORA * PRECO).toFixed(2));
