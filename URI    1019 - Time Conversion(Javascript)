@@ -1,0 +1,8 @@
+const input = require('fs').readFileSync('/dev/stdin', 'utf8');
+let N = parseInt(input);
+const hora = parseInt(N / 3600);
+const num = parseInt(N % 3600);
+const min = parseInt(num / 60); 
+const x = (hora * 3600 + min * 60);
+const seg = N - x;
+console.log( hora +":"+ min + ":" + seg);
