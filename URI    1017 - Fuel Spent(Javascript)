@@ -1,0 +1,9 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var HORA = parseInt(lines.shift());
+var VELOCIDADE_MEDIA = parseInt(lines.shift()); 
+
+
+var Fuel_Spent = (HORA * VELOCIDADE_MEDIA) / 12;
+console.log(Fuel_Spent.toFixed(3));
